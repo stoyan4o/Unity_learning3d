@@ -57,9 +57,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\PlayerScript.cs" />
+    <Compile Include="Assets\Grass And Flowers Pack 1\Example Scene\SimpleTextureDrawing.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\WorldMaterialsFree\Shaders\WorldMatHDRPFree.shader" />
+    <None Include="Assets\WorldMaterialsFree\Shaders\WorldMatLiteFree.shader" />
+    <None Include="Assets\WorldMaterialsFree\Shaders\WorldMatFree.shader" />
     <None Include="Assets\FantasyEnvironments\Environments\README.txt" />
+    <None Include="Assets\WorldMaterialsFree\Shaders\WorldMatURPFree.shader" />
+    <None Include="Assets\Grass And Flowers Pack 1\Example Scene\Skyboxes\_skybox info.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
