@@ -709,25 +709,13 @@
       <Project>{8DC4339E-3E7B-2FAF-2CAE-50F336A46340}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Services.Core.Analytics.csproj">
-      <Project>{3DB562D3-D088-AEB3-03E4-037E4695055D}</Project>
-      <Name>Unity.Services.Core.Analytics</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{9A3C5B38-F8C6-6FD9-A017-126B8BDFF528}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Services.Core.Environments.csproj">
-      <Project>{9A9E4322-0885-9DAF-FCDB-353A221AEE6C}</Project>
-      <Name>Unity.Services.Core.Environments</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
       <Project>{05111FF8-2741-07BB-0962-5FBC25C34874}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{21D20DB0-D8EA-CD64-5D4D-865E7A7C7D16}</Project>
-      <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
       <Project>{CA855E46-E710-9BFC-9004-7C08883BFA86}</Project>
@@ -756,6 +744,18 @@
     <ProjectReference Include="Unity.Services.Core.csproj">
       <Project>{90AF3A3C-39D5-3A7D-7AFD-B93EBD6A7429}</Project>
       <Name>Unity.Services.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Services.Core.Analytics.csproj">
+      <Project>{3DB562D3-D088-AEB3-03E4-037E4695055D}</Project>
+      <Name>Unity.Services.Core.Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Services.Core.Environments.csproj">
+      <Project>{9A9E4322-0885-9DAF-FCDB-353A221AEE6C}</Project>
+      <Name>Unity.Services.Core.Environments</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.Editor.csproj">
+      <Project>{21D20DB0-D8EA-CD64-5D4D-865E7A7C7D16}</Project>
+      <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

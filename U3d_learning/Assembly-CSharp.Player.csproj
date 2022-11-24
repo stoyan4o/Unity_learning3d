@@ -660,14 +660,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.Services.Core.Analytics.Player.csproj">
-      <Project>{21AC3D30-B2AE-6B09-319E-F4D5736CAB4A}</Project>
-      <Name>Unity.Services.Core.Analytics.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Services.Core.Environments.Player.csproj">
-      <Project>{7BB8E10B-31E6-1EAF-1655-4A527C575170}</Project>
-      <Name>Unity.Services.Core.Environments.Player</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Player.csproj">
       <Project>{FAC41B3F-6B26-DA17-2868-85E681EDE91D}</Project>
       <Name>Unity.Timeline.Player</Name>
@@ -683,6 +675,14 @@
     <ProjectReference Include="Unity.Services.Core.Player.csproj">
       <Project>{BA42A4BD-41EC-176B-A50C-664E77E9661F}</Project>
       <Name>Unity.Services.Core.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Services.Core.Analytics.Player.csproj">
+      <Project>{21AC3D30-B2AE-6B09-319E-F4D5736CAB4A}</Project>
+      <Name>Unity.Services.Core.Analytics.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Services.Core.Environments.Player.csproj">
+      <Project>{7BB8E10B-31E6-1EAF-1655-4A527C575170}</Project>
+      <Name>Unity.Services.Core.Environments.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
