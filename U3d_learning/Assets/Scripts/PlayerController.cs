@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
     private float turner = 1.0f;
     private float looker = 1.0f;
-    public float sensitivity = 10f;
+    public float sensitivity = 1f;
     // Update is called once per frame
     void Update()
     {
