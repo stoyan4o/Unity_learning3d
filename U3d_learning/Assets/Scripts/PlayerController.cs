@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
         {
             // Feed moveDirection with input.
             // If I want to strafe instead of turn -> x should be Input.GetAxis("Horizontal")
-            moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
+            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             moveDirection = transform.TransformDirection(moveDirection);
             // Multiply it by speed.
             moveDirection *= speedTurn;
@@ -81,13 +81,13 @@ public class PlayerController : MonoBehaviour
                 moveDirection.y = jumpSpeed;
             }
         }
-        turner = Input.GetAxis("Horizontal") * sensitivity; //  Input.GetAxis("Mouse X")
-
-        if (Input.GetMouseButton(1))    // Holding right mouse button
+        //turner = Input.GetAxis("Horizontal") * sensitivity; //  Input.GetAxis("Mouse X")
+        turner = 0;
+        if (!Input.GetMouseButton(1))    // Holding right mouse button
         {
             // speedLook affects only mouse input
             looker = Input.GetAxis("Mouse Y") * sensitivity * speedLook * this.InvertMouse;
-            turner += Input.GetAxis("Mouse X") * sensitivity * speedLook * speedTurn;
+            turner = Input.GetAxis("Mouse X") * sensitivity * speedLook * speedTurn;
         }
         else
             looker = 0;
