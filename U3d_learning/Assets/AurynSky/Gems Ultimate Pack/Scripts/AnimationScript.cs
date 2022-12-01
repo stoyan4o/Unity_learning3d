@@ -34,7 +34,6 @@ public class AnimationScript : MonoBehaviour {
 	void Update () {
 
        
-        
         if(isAnimated)
         {
             if(isRotating)
