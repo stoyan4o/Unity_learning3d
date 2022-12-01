@@ -58,7 +58,6 @@ public class PayloadAI : MonoBehaviour
         transform.LookAt(NextWP.transform.position);
         transform.position = Vector3.MoveTowards(transform.position, CurrentWP.transform.position, step);
     }
-
     
     void FindNextWayPoint()
     {
@@ -72,5 +71,10 @@ public class PayloadAI : MonoBehaviour
 
         transform.LookAt(NextWP.transform.position);
         transform.position = Vector3.MoveTowards(transform.position, NextWP.transform.position, step);
+    }
+
+    void Boost()
+    {
+        
     }
 }

@@ -78,7 +78,6 @@ public class EnemyAI : MonoBehaviour
         transform.LookAt(SpawnPoint);
         transform.position = Vector3.MoveTowards(transform.position, this.SpawnPoint, step);
     }
-
     void MoveToTarget()
     {
         var step = moveSpeed * Time.deltaTime;          // calculate distance to move
@@ -108,7 +107,4 @@ public class EnemyAI : MonoBehaviour
 
         return closestGO;
     }
-
-
-    
 }

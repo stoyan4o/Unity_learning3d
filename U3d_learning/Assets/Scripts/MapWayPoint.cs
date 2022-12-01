@@ -27,8 +27,4 @@ public class MapWayPoint : MonoBehaviour
        
         DrawMgr.DrawEllipse(transform.position, transform.up, transform.forward, _gizmoSize, _gizmoSize, _segments, colorRange);
     }
-
-
-    //
-    
 }

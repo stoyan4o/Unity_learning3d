@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
+    bool IsDiying = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,21 +15,21 @@ public class PickUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (IsDiying)
             Die();
     }
 
-    bool IsDiying = false;
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Player"))
         {
             // play sound
             IsDiying = true;    
         }
-
-
+        else if (other.gameObject.CompareTag("Payload"))
+        {
+            other.gameObject.GetComponent("PayloadAI").SendMessage("Boost()", 1);
+        }
     }
 
     void Die()
