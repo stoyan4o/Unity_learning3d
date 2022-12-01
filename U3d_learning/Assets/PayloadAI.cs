@@ -8,11 +8,12 @@ public class PayloadAI : MonoBehaviour
 
     public GameObject NextWP;
     public GameObject CurrentWP;
-    public GameObject Player;
+    public GameObject Player;                   // For multiple player keep list of players, Add/Remove them with colider. Get PlayersInRange is slower
 
-    public float MoveSpeed = 1.0f;
+    public float MoveSpeed = 1.0f;              // Speed to move to next waypoint
     public float rangePushedByPlayer = 4.0f;
 
+    int idxWayPoint = 0;
     public List<GameObject> wayPoints;
     
     void Start()
@@ -36,7 +37,6 @@ public class PayloadAI : MonoBehaviour
             return;
         }
 
-
         float distToNextWP = Vector3.Distance(transform.position, NextWP.transform.position);
 
         if (distToNextWP < 1)
@@ -51,15 +51,15 @@ public class PayloadAI : MonoBehaviour
         }
     }
 
-    private void SlowlyFallBack()
+    void SlowlyFallBack()
     {
-        var step = this.MoveSpeed * Time.deltaTime * 0.2f;          // calculate distance to move
+        var step = this.MoveSpeed * Time.deltaTime * 0.2f;          // calculate distance to move 5 times slower than speed to move to next waypoint
 
         transform.LookAt(NextWP.transform.position);
         transform.position = Vector3.MoveTowards(transform.position, CurrentWP.transform.position, step);
     }
 
-    int idxWayPoint = 0;
+    
     void FindNextWayPoint()
     {
         idxWayPoint++;

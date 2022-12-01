@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public float speedTurn = 1.0f;      // movement speed
     public float speedLook = 1.0f;      // How fast we turn left or right
     public float modifierRun = 2.0f;    // Running is 2 time the walk speed
-    public float jumpSpeed = 8.0f;      // Speed to jump
+    public float jumpSpeed = 8.0f;      //  jump momentum
     public float gravity = 10.0f;       // grafity force
     private Vector3 moveDirection = Vector3.zero;
 
@@ -22,41 +22,10 @@ public class PlayerController : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
     }
-
-    // Update is called once per frame
-    /*void Update()
-    {
-        
-        // is the controller on the ground?
-        if (controller.isGrounded)
-        {
-            //Feed moveDirection with input.
-            moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical")); //  Input.GetAxis("Horizontal")
-            moveDirection = transform.TransformDirection(moveDirection);
-            //Multiply it by speed.
-            moveDirection *= speed;
-            //Jumping
-            if (Input.GetButton("Jump"))
-                moveDirection.y = jumpSpeed;
-
-        }
-        //Applying gravity to the controller
-        moveDirection.y -= gravity * Time.deltaTime;
-        //Making the character move
-        controller.Move(moveDirection * Time.deltaTime);
-
-        if (controller.isGrounded)
-        {
-            Vector3 rotateDir = new Vector3(0, Input.GetAxis("Horizontal"), 0);
-            moveDirection = transform.TransformDirection(rotateDir);
-            controller.transform.Rotate(rotateDir);
-        }
-    }*/
-
-
-    private float turner = 1.0f;
+ 
+    private float turner = 0.0f;    // turn angle 0 - Strafing, 1 - Turn with A,D keys
     private float looker = 1.0f;
-    public float sensitivity = 1f;
+    public float sensitivity = 1f;  // todo: separate mouse sensitivity, keyboard sensitivity
     // Update is called once per frame
     void Update()
     {
@@ -82,8 +51,8 @@ public class PlayerController : MonoBehaviour
             }
         }
         //turner = Input.GetAxis("Horizontal") * sensitivity; //  Input.GetAxis("Mouse X")
-        turner = 0;
-        if (!Input.GetMouseButton(1))    // Holding right mouse button
+       
+        if (!Input.GetMouseButton(1))    // Holding right mouse button with not move camera. Use this to move mouse cursor
         {
             // speedLook affects only mouse input
             looker = Input.GetAxis("Mouse Y") * sensitivity * speedLook * this.InvertMouse;
@@ -92,14 +61,13 @@ public class PlayerController : MonoBehaviour
         else
             looker = 0;
 
+        // Now this can be done in one vector. But is we want to turn with A, D keys this is needed
         if (turner != 0)
         {
-            // 
             transform.eulerAngles += new Vector3(0, turner, 0);
         }
         if (looker != 0)
-        {
-            // 
+        { 
             transform.eulerAngles += new Vector3(looker, 0, 0);
         }
 
