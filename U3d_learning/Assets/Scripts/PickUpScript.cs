@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUp : MonoBehaviour
+public class PickUpScript : MonoBehaviour
 {
     bool IsDiying = false;
 
@@ -28,16 +28,16 @@ public class PickUp : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Payload"))
         {
-            other.gameObject.GetComponent("PayloadAI").SendMessage("Boost()", 1);
+           // other.gameObject.GetComponent("PayloadAI").SendMessage("Boost()", 1);
         }
     }
 
     void Die()
     {
-        float speed = 0.05f;
+        float speed = 20f;
         var step = speed * Time.deltaTime;
 
-        transform.position = Vector3.MoveTowards(this.transform.position, Camera.main.transform.position,speed);
+        transform.position = Vector3.MoveTowards(this.transform.position, Camera.main.transform.position, step);
 
         if (Vector3.Distance(transform.position, Camera.main.transform.position) < 1)
         {
