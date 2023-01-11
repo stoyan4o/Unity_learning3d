@@ -111,6 +111,10 @@ public class GameManager : MonoBehaviour
                 break;
             case State.LEVELCOMPLETED:
                 panelLevelCompleted.SetActive(true);
+                
+                this.Level++;
+                SwitchState(State.LOADLEVEL);
+
                 break;
             case State.LOADLEVEL:
                 if (_level >= Levels.Length)
@@ -119,7 +123,7 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    _currentLevel = Instantiate(Levels[0]);
+                    _currentLevel = Instantiate(Levels[this.Level]);
                     SwitchState(State.PLAY);
                 }
                 break;

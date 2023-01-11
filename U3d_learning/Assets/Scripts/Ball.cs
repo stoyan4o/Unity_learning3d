@@ -31,6 +31,6 @@ public class Ball : MonoBehaviour
         // in _velocity we have the speed before the collision
         _rigidbody.velocity = Vector3.Reflect(_velocity, collision.contacts[0].normal);
 
-        GlobalVars.Instance.a = 1;
+        // GlobalVars.Instance.a = 1;
     }
 }
