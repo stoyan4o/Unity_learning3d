@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d5cad20196e9c4941936bff01dbd9173, type: 2}
+  - {fileID: 2100000, guid: ab98f5bcb9fc128489634b7011f431ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,5 +111,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hits: 1
-  RewardPoints: 100
+  points: 100
   rotator: {x: 45, y: 0, z: 0}
+  hitMaterial: {fileID: 0}

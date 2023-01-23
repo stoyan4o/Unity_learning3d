@@ -32,10 +32,13 @@ public class Brick : MonoBehaviour
         if (Hits <= 0)
         {
             GameManager.Instance.Score += points;
-            Destroy(gameObject);
+
+            //GameManager.Instance.RemoveBrick(gameObject);
+
+             Destroy(gameObject);
         }
         _renderer.sharedMaterial = hitMaterial;
-        Invoke("RestoreMaterial", 5);
+        Invoke("RestoreMaterial", 0.05f);
     }
 
     void RestoreMaterial()

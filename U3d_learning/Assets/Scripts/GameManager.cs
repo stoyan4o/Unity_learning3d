@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,7 +23,28 @@ public class GameManager : MonoBehaviour
     public GameObject _currentBall;
     public GameObject _currentLevel;
 
+    // public List<Component> cachedBricks;
+
     public GameObject[] Levels; // Array of levels as prefabs
+
+   /* internal void RemoveBrick(GameObject gameObject)
+    {
+        Component brickToRemove = null;
+        
+        IEnumerator en = cachedBricks.GetEnumerator();
+        while (en.MoveNext())
+        {
+            if (((Component)en.Current).gameObject.name.Equals(gameObject.name))
+            {
+                brickToRemove = en.Current as Component;
+                break;
+            }
+        }
+
+        if (brickToRemove != null)
+            cachedBricks.Remove(brickToRemove);
+    }*/
+
     public static GameManager Instance { get; private set; }
     public enum State { INIT, 
         MENU,
@@ -101,6 +124,7 @@ public class GameManager : MonoBehaviour
                     if (_balls > 0)
                     {
                         _currentBall = Instantiate(ballPrefab);
+                        
                     }
                     else
                     {
@@ -124,6 +148,7 @@ public class GameManager : MonoBehaviour
                 else
                 {
                     _currentLevel = Instantiate(Levels[this.Level]);
+                    PrecacheBricksInLevel();
                     SwitchState(State.PLAY);
                 }
                 break;
@@ -132,6 +157,11 @@ public class GameManager : MonoBehaviour
                 break;
 
         }
+    }
+
+    void PrecacheBricksInLevel()
+    {
+       // cachedBricks = _currentLevel.GetComponentsInChildren(typeof(Component)).ToList();
     }
 
     void EndState()

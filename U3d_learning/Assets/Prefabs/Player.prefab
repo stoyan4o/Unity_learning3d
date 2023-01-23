@@ -112,6 +112,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b75e46c2382d345abad78be94734ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeftWall: {fileID: 0}
+  RightWall: {fileID: 0}
+  mouseX: 0
+  screenX: 0
 --- !u!54 &6632050485789280863
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -140,3 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b75e46c2382d345abad78be94734ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LeftWall: {fileID: 0}
+  RightWall: {fileID: 0}
+  mouseX: 0
+  screenX: 0
