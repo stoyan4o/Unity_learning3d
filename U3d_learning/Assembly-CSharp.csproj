@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\AurynSky\Gems Ultimate Pack\Scripts\AnimationScript.cs" />
     <Compile Include="Assets\Scripts\Paddle.cs" />
+    <Compile Include="Assets\Scripts\ClickMgr.cs" />
     <Compile Include="Assets\Scripts\Ball.cs" />
     <Compile Include="Assets\Scripts\Brick.cs" />
     <Compile Include="Assets\Scripts\DistanceMetter.cs" />
@@ -75,7 +76,6 @@
     <Compile Include="Assets\Scripts\Utils\AudioMgr.cs" />
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\Utils\DrawMgr.cs" />
-    <Compile Include="Assets\Scripts\ClickMgr.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\WorldMaterialsFree\Shaders\WorldMatHDRPFree.shader" />

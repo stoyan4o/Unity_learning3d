@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class AudioMgr : MonoBehaviour
 {
+    // Singleton
+    public static AudioMgr Intance { get; private set; }
 
-    public Sound[] sounds;
+    public static Sound[] sounds;
 
     public static AudioSource[] _audioSource;
     
@@ -19,11 +21,10 @@ public class AudioMgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AudioMgr.PlaySound(SoundType.BallHitsBrick);
+        // AudioMgr.PlaySound(SoundType.BallHitsBrick);
     }
 
-    // Singleton
-    public static AudioMgr Intance { get; private set; }
+    
     
     public static void PlaySound(SoundType stype)
     {
@@ -34,6 +35,7 @@ public class AudioMgr : MonoBehaviour
                 break;
                     
             case SoundType.BallHitsWall:
+                AudioMgr._audioSource[1].Play();
                 break;
         }
     }

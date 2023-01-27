@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
         LOADLEVEL, 
         GAMEOVER,
         PAUSE}
-    State _state;
+    State _state = State.PAUSE;
 
     private int _score = 0;
     public int Score
@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private int _balls;
+    private int _balls = 0;
     public int Balls
     {
         get { return _balls; }
@@ -82,23 +82,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// This method is called when user clicks on Play button
-    /// </summary>
-    public void PlayClicked()
-    {
-        SwitchState(State.INIT);
-    }
+    
 
     void Start()
     {
         Instance = this;
-        SwitchState(State.MENU);
+        
+        SwitchState(State.INIT);
     }
 
     public void SwitchState(State newState)
     {
-        EndState();
+        EndCurrentState();
         BeginState(newState);
         _state = newState;
     }
@@ -148,12 +143,16 @@ public class GameManager : MonoBehaviour
                 else
                 {
                     _currentLevel = Instantiate(Levels[this.Level]);
+                    // _bricksCount = GetBricksCountForLevel(); // броя на тухлите се знае предварително, няма нужда да се преброяват всеки път
                     PrecacheBricksInLevel();
                     SwitchState(State.PLAY);
                 }
                 break;
             case State.GAMEOVER:
                 panelGameOver.SetActive(true);
+                break;
+            case State.PAUSE:
+                Time.timeScale = 0.0f;
                 break;
 
         }
@@ -164,7 +163,7 @@ public class GameManager : MonoBehaviour
        // cachedBricks = _currentLevel.GetComponentsInChildren(typeof(Component)).ToList();
     }
 
-    void EndState()
+    void EndCurrentState()
     {
         switch (_state)
         {
@@ -175,6 +174,7 @@ public class GameManager : MonoBehaviour
                 
                 break;
             case State.PLAY:
+                panelPlay.SetActive(false);
                 break;
             case State.LEVELCOMPLETED:
                 break;
@@ -182,6 +182,9 @@ public class GameManager : MonoBehaviour
                 break;
             case State.GAMEOVER:
                 panelPlay.SetActive(false);
+                break;
+            case State.PAUSE:
+                Time.timeScale = 1.0f;
                 break;
 
         }
@@ -208,4 +211,27 @@ public class GameManager : MonoBehaviour
 
         }
     }
+
+    #region Button Click Handlers
+    public void ButtonMenu_Click()
+    {
+        SwitchState(State.MENU);
+    }
+
+    /// <summary>
+    /// This method is called when user clicks on Play button
+    /// </summary>
+    public void ButtonPlay_Click()
+    {
+        Console.WriteLine("GameManager::ButtonPLay_Click()");
+        SwitchState(State.INIT);
+    }
+
+   public void ButtonBack_Click()
+    {
+        Console.WriteLine("GameManager::ButtonBack_Click()");
+        SwitchState(State.PLAY);
+    }
+    #endregion
+
 }

@@ -24,12 +24,12 @@ public class ClickMgr : MonoBehaviour
 
     public void ButtonOptions_Click()
     {
-
+        SceneManager.LoadScene("BB_OptionsScene");
     }
 
     public static void ButtonQuit_Click()
     {
-
+        Application.Quit();
     }
 
 

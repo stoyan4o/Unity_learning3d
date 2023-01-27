@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour
 {
-    Rigidbody _rigidbody;
+    Rigidbody _rigidbody;   // Rigid body of the paddle. This is used to move the paddle
 
     public GameObject LeftWall;
     public GameObject RightWall;
 
     float wallWidth = 0;
-    float paddleWidth = 0;
+    float paddleWidth = 0;  // Get this from the 
 
     public float mouseX = 0;
     public float screenX = 0;
@@ -30,7 +30,7 @@ public class Paddle : MonoBehaviour
     {
         mouseX = Input.mousePosition.x;
         
-        Vector3 newPos = new Vector3(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0, 26)).x, -18, 0);
+        Vector3 newPos = new Vector3(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0, 26)).x, 121, -140); // x,-18,0
 
        if (newPos.x < LeftWall.transform.position.x + wallWidth)
         {

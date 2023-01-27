@@ -10,8 +10,16 @@ public class Ball : MonoBehaviour
 
     void Start()
     {
+        /*
+         * Vector3.
+         *      forward = 0,0,1,
+         *      back 0,0,-1
+         *      
+         */
+        Vector3 direction = new Vector3(0, 0, -1);
+
         _rigidbody = GetComponent<Rigidbody>();
-        _rigidbody.velocity = Vector3.down * _speed;    // at the beginning the ball should drop down
+        _rigidbody.velocity = direction * _speed;    // at the beginning the ball should drop DOWN
     }
 
     // Update is called once per frame
