@@ -15,6 +15,8 @@ public class Paddle : MonoBehaviour
     public float mouseX = 0;
     public float screenX = 0;
     // Start is called before the first frame update
+
+    public float paddleY = 120;
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -30,7 +32,7 @@ public class Paddle : MonoBehaviour
     {
         mouseX = Input.mousePosition.x;
         
-        Vector3 newPos = new Vector3(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0, 26)).x, 121, -140); // x,-18,0
+        Vector3 newPos = new Vector3(Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, 0, 26)).x, paddleY, -140); // x,-18,0
 
        if (newPos.x < LeftWall.transform.position.x + wallWidth)
         {
