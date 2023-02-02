@@ -8,6 +8,7 @@ TagManager:
   - NPCGuard
   - SpawnPoint
   - Payload
+  - BottomColider
   layers:
   - Default
   - TransparentFX

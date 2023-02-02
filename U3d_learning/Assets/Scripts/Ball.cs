@@ -8,6 +8,8 @@ public class Ball : MonoBehaviour
     Rigidbody _rigidbody;
     Vector3 _velocity;  // speed with direction
 
+    string TAG_BOTTOM_COLIDER = "BottomColider";    // If ball hits this colider, ball is out of bounds. We loose a ball
+
     void Start()
     {
         /*
@@ -36,6 +38,15 @@ public class Ball : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.collider.CompareTag(TAG_BOTTOM_COLIDER))
+        {
+            // End game for this ball
+            Destroy(gameObject);
+            // play loose sound
+            return;
+        }
+
+
         // in _velocity we have the speed before the collision
         _rigidbody.velocity = Vector3.Reflect(_velocity, collision.contacts[0].normal);
 
