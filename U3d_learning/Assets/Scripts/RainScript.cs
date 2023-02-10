@@ -21,14 +21,15 @@ public class RainScript : MonoBehaviour
         if (spawnTimer >= spawnInterval)
         {
             spawnTimer = 0f;
-            SpawnRaindrop();
+            //SpawnRaindrop();
         }
     }
 
     private void SpawnRaindrop()
     {
-        currentDrops++;
-        GameObject newDrop = Instantiate(drop, transform.position, Quaternion.identity);
-        newDrop.GetComponent<Rigidbody>().velocity = Vector3.down * dropSpeed;
+         
+        //currentDrops++;
+       // GameObject newDrop = Instantiate(drop, transform.position, Quaternion.identity);
+       // newDrop.GetComponent<Rigidbody>().velocity = Vector3.down * dropSpeed;
     }
 }

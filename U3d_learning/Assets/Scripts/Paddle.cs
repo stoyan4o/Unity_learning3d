@@ -17,6 +17,8 @@ public class Paddle : MonoBehaviour
     // Start is called before the first frame update
 
     public float paddleY = 120;
+     
+    
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -25,6 +27,7 @@ public class Paddle : MonoBehaviour
         Renderer rend = LeftWall.GetComponent<Renderer>();
         wallWidth = rend.bounds.size.x;
 
+         
     }
 
     // Update is called once per frame
@@ -45,5 +48,14 @@ public class Paddle : MonoBehaviour
          
 
         _rigidbody.MovePosition(newPos);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.gameObject.CompareTag("ball"))
+        {
+            // AudioSource.PlayClipAtPoint(bounceClip.clip, collision.transform.position);
+            AudioMgr.Instance.PlaySound("pick");
+        }
     }
 }

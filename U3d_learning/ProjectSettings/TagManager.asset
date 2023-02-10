@@ -9,6 +9,8 @@ TagManager:
   - SpawnPoint
   - Payload
   - BottomColider
+  - ball
+  - Wall
   layers:
   - Default
   - TransparentFX

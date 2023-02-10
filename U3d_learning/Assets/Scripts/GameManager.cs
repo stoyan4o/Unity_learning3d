@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject[] Levels; // Array of levels as prefabs
 
+
    /* internal void RemoveBrick(GameObject gameObject)
     {
         Component brickToRemove = null;
