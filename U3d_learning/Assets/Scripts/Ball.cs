@@ -53,7 +53,7 @@ public class Ball : MonoBehaviour
         }
         else if (collision.collider.CompareTag(TAG_WALL))
         {
-            AudioMgr.Instance.PlaySound("online");
+            AudioMgr.Instance.PlaySound("bounce");
         }
         else if (collision.collider.CompareTag(TAG_PLAYER))
         {

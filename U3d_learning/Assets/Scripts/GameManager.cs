@@ -90,6 +90,7 @@ public class GameManager : MonoBehaviour
         Instance = this;
         
         SwitchState(State.INIT);
+        AudioMgr.Instance.PlaySound("pick");
     }
 
     public void SwitchState(State newState)

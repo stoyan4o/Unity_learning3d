@@ -231,11 +231,11 @@
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Window\SequenceContext.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Undo\UndoScope.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\CustomEditors\TrackEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Signals\Styles.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Window\TimelineWindow_StateChange.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Signals\Styles.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Utilities\TypeUtility.cs" />
-    <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\inspectors\MarkerInspector.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Attributes\ShortcutAttribute.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\inspectors\MarkerInspector.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Audio\AudioPlayableAssetInspector.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Manipulators\Sequence\RectangleZoom.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Window\Modes\TimeReferenceMode.cs" />
@@ -320,9 +320,9 @@
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\inspectors\AnimationTrackInspector.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\State\WindowState.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Manipulators\Move\MoveItemModeRipple.cs" />
-    <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\inspectors\DirectorNamedColorInspector.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Utilities\Scopes\GUIColorOverride.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\treeview\ItemGui\TimelineClipGUI.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\inspectors\DirectorNamedColorInspector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.timeline@1.6.4\Editor\Unity.Timeline.Editor.asmdef" />
@@ -581,6 +581,9 @@
     </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>D:\Program Files (x86)\Unity Editors\2021.3.6f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>D:\Program Files (x86)\Unity Editors\2021.3.6f1\Editor\Data\PlaybackEngines\WebGLSupport\UnityEditor.WebGL.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>D:\Program Files (x86)\Unity Editors\2021.3.6f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>

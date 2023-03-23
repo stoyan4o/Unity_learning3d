@@ -6,7 +6,6 @@ using UnityEngine;
 public class AudioMgr : MonoBehaviour
 {
     // Singleton
-
     public static AudioMgr Instance;
 
     [SerializeField] AudioSource musicSource;
@@ -32,10 +31,10 @@ public class AudioMgr : MonoBehaviour
         //c//_audioSource = GetComponent<AudioSource>();
         for(int i=0;i<sounds.Length;i++)
         {
-            GameObject _go = new GameObject("Sound_" + i + "_" + sounds[i].Name);
+            /*GameObject _go = new GameObject("Sound_" + i + "_" + sounds[i].Name);
             _go.transform.SetParent(this.transform);
             AudioSource source = _go.AddComponent<AudioSource>();
-            sounds[i].SetSource(source);
+            sounds[i].SetSource(source);*/
             Debug.Log("creating sound " + sounds[i].Name);
         }
 
@@ -55,24 +54,26 @@ public class AudioMgr : MonoBehaviour
             if (s.Name.CompareTo(clipName) == 0)
             {
                 _effectSource.volume = s.volume;
+               // _effectSource.pitch = s.pitch;
                 _effectSource.PlayOneShot(s.Clip);
+                 //s.Play();
                 Debug.Log("playing - " + clipName);
-                break;
+                return;
             }
         }
-        Debug.Log("not found - " + clipName);
+        Debug.Log("clip not found - " + clipName);
     }
 
     internal void PlayBallHitsPlayer(Vector3 position)
     {
-        //_audioSource.clip = bounceBall;
-         //   _audioSource.Play();
+        // _audioSource.clip = bounceBall;
+        // _audioSource.Play();
         // AudioSource.PlayClipAtPoint(bounceBall, position);
     }
 
     internal void PlayBallHitsWall(Vector3 position)
     {
-        //_audioSource.clip = bounceWall;
+        // _audioSource.clip = bounceWall;
         // _audioSource.Play();
         // AudioSource.PlayClipAtPoint(bounceWall, position);
     }
@@ -87,15 +88,15 @@ public class Sound
     public AudioClip Clip;          // the sound file to play
 
     private AudioSource _source;
-    [Range(0f,1f)]
+    [Range(0f, 1f)]
     public float volume;
-    [Range(0.5f, 0.5f)]
+    [Range(-0.5f, 0.5f)]
     public float pitch;
 
-    [Range(0f,0.5f)]
-    public float randomVolume = 0.1f;
     [Range(0f, 0.5f)]
-    public float randomPitch = 0.1f;
+    public float randomVolume = 0.2f;
+    [Range(0f, 0.5f)]
+    public float randomPitch = 0.2f;
 
     public void SetSource(AudioSource aSource)
     {
@@ -105,7 +106,7 @@ public class Sound
 
     public void Play()
     {
-        _source.volume = volume * (1+ Random.Range(-randomVolume / 2f, randomVolume/2f));
+        _source.volume = volume * (1 + Random.Range(-randomVolume / 2f, randomVolume / 2f));
         _source.pitch = pitch * (1 + Random.Range(-randomPitch / 2f, randomPitch / 2f));
         _source.Play();
     }

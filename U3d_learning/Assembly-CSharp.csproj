@@ -731,25 +731,17 @@
       <Project>{8DC4339E-3E7B-2FAF-2CAE-50F336A46340}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Services.Core.Analytics.csproj">
-      <Project>{3DB562D3-D088-AEB3-03E4-037E4695055D}</Project>
-      <Name>Unity.Services.Core.Analytics</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{9A3C5B38-F8C6-6FD9-A017-126B8BDFF528}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Services.Core.Environments.csproj">
-      <Project>{9A9E4322-0885-9DAF-FCDB-353A221AEE6C}</Project>
-      <Name>Unity.Services.Core.Environments</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
       <Project>{05111FF8-2741-07BB-0962-5FBC25C34874}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{21D20DB0-D8EA-CD64-5D4D-865E7A7C7D16}</Project>
-      <Name>Unity.Timeline.Editor</Name>
+    <ProjectReference Include="Unity.ProBuilder.AddOns.Editor.csproj">
+      <Project>{5BFE0B02-6D7F-5B47-60A5-37B1DB71D7A3}</Project>
+      <Name>Unity.ProBuilder.AddOns.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
       <Project>{CA855E46-E710-9BFC-9004-7C08883BFA86}</Project>
@@ -758,6 +750,14 @@
     <ProjectReference Include="Unity.TextMeshPro.csproj">
       <Project>{1668088B-2522-2A1A-022D-0F8B02122666}</Project>
       <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.csproj">
+      <Project>{9AFC2815-BA91-8362-67DC-32E971AE9B17}</Project>
+      <Name>Unity.ProBuilder</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.Editor.csproj">
+      <Project>{80171F45-B419-2462-6693-82854463BF8C}</Project>
+      <Name>Unity.ProBuilder.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{D6C53B19-0052-288F-6F3D-73005E1B9BA1}</Project>
@@ -775,9 +775,33 @@
       <Project>{D776AD16-08D8-9F43-DF0C-1B3FAEE694B1}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Polybrush.Editor.csproj">
+      <Project>{3899AA74-568D-F02F-5990-4B5DD3FAAAC3}</Project>
+      <Name>Unity.Polybrush.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Services.Core.csproj">
       <Project>{90AF3A3C-39D5-3A7D-7AFD-B93EBD6A7429}</Project>
       <Name>Unity.Services.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Polybrush.csproj">
+      <Project>{A0666537-E657-8CCC-8493-95CA7C65086F}</Project>
+      <Name>Unity.Polybrush</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Services.Core.Analytics.csproj">
+      <Project>{3DB562D3-D088-AEB3-03E4-037E4695055D}</Project>
+      <Name>Unity.Services.Core.Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ProBuilder.AssetIdRemapUtility.csproj">
+      <Project>{7EFFB9A2-5013-E698-435F-7CC2F9AD4150}</Project>
+      <Name>Unity.ProBuilder.AssetIdRemapUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Services.Core.Environments.csproj">
+      <Project>{9A9E4322-0885-9DAF-FCDB-353A221AEE6C}</Project>
+      <Name>Unity.Services.Core.Environments</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.Editor.csproj">
+      <Project>{21D20DB0-D8EA-CD64-5D4D-865E7A7C7D16}</Project>
+      <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

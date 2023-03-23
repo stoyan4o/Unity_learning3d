@@ -54,8 +54,8 @@ public class Paddle : MonoBehaviour
     {
         if (collision.collider.gameObject.CompareTag("ball"))
         {
-            // AudioSource.PlayClipAtPoint(bounceClip.clip, collision.transform.position);
-            AudioMgr.Instance.PlaySound("pick");
+            // todo: move this to Ball.OnCollisionEnter(..)
+            AudioMgr.Instance.PlaySound("hit_paddle");
         }
     }
 }

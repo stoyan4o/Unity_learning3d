@@ -34,7 +34,7 @@ public class Brick : MonoBehaviour
             GameManager.Instance.Score += points;
 
             //GameManager.Instance.RemoveBrick(gameObject);
-
+            AudioMgr.Instance.PlaySound("hit_brick");
              Destroy(gameObject);
         }
         _renderer.sharedMaterial = hitMaterial;

@@ -62,8 +62,8 @@
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.18\Editor\Collaborate\Components\Menus\FloatingMenuItem.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.18\Editor\Collaborate\Views\Adapters\IAdapter.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.18\Editor\Collaborate\EditorGameService\SettingsProviderVisuals\LearnMoreVisualHelper.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.18\Editor\Collaborate\Components\IconButton.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.18\Editor\Collaborate\Components\SearchBar.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.18\Editor\Collaborate\Components\IconButton.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.18\Editor\Collaborate\EditorGameService\SettingsProviderVisuals\EnabledVisuals.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.18\Editor\Collaborate\Utilities\Threading.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.18\Editor\Collaborate\Views\MainPageView.cs" />
@@ -452,6 +452,9 @@
     </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>D:\Program Files (x86)\Unity Editors\2021.3.6f1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>D:\Program Files (x86)\Unity Editors\2021.3.6f1\Editor\Data\PlaybackEngines\WebGLSupport\UnityEditor.WebGL.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>D:\Program Files (x86)\Unity Editors\2021.3.6f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
@@ -858,6 +861,10 @@
     <ProjectReference Include="Unity.Services.Core.Editor.csproj">
       <Project>{B9FA011C-BCBB-0268-503E-5A78F6525119}</Project>
       <Name>Unity.Services.Core.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Settings.Editor.csproj">
+      <Project>{0EED9B60-B8AC-DA01-30B1-B61A44C47FF8}</Project>
+      <Name>Unity.Settings.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{D6C53B19-0052-288F-6F3D-73005E1B9BA1}</Project>
